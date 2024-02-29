@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MEN'S JACKETS | Rainy Days</title>
+    <title>MEN'S TOPS | Rainy Days</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <script defer src="js/mens_tops.js"></script>
   </head>
-  <body class="mens-page"></body>
+
+  <body class="mens-page">
     <header>
       <div class="logo">
         <a href="index.html">
@@ -61,84 +63,9 @@
       </nav>
     </header>
     <main>
-      <h1>Men's Jackets</h1>
+      <h1>Men's Tops</h1>
       <div class="body-items">
-        <div class="row">
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/green_t-shirt.png" alt="Green T-Shirt" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">Green T-Shirt</p>
-              <p class="item-price">$30</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/mens_white_shirt.png" alt="White Shirt" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">White Shirt</p>
-              <p class="item-price">$100</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/blue_goingfishing_t-shirt.png" alt="Blue t-shirt with going fishing text" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">Blue Going Fishing T-shirt</p>
-              <p class="item-price">$40</p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/mens_orange_flanell_shirt.png" \alt="Orange Flanell Shirt" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">Orange Flanell Shirt</p>
-              <p class="item-price">$150</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/mens_blue_hoodie.png" alt="Blue Hoodie" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">Blue Hoodie</p>
-              <p class="item-price">$150</p>
-            </div>
-          </div>
-          <div class="item">
-            <div class="buy-now">
-              <button class="buy-button">Buy Now</button>
-            </div>
-            <a href="product_page.html">
-              <img src="images/mens_white_sweater.png" alt="White Sweater" />
-            </a>
-            <div class="item-caption">
-              <p class="item-text">White Sweater</p>
-              <p class="item-price">$200</p>
-            </div>
-          </div>
-        </div>
+        <div class="row" id="product-container"></div>
       </div>
     </main>
     <footer>
@@ -161,5 +88,6 @@
         </div>
       </div>
     </footer>
+    <div id="loading-indicator">Loading...</div>
   </body>
 </html>

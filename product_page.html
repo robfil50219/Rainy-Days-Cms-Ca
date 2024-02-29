@@ -5,89 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page | Rainy Days</title>
-    <style>
-      header {
-        position: relative;
-        background-color: #90babf;
-        padding: 30px;
-        display: flex;
-        justify-content: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 2);
-      }
-
-      .product-details {
-        position: absolute;
-        filter: drop-shadow(0px 5px 4px rgba(0, 0, 0, 0.4));
-        border-radius: 20px;
-      }
-
-      .product-image {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-        margin-top: 50px;
-        margin-left: 20px;
-        margin-right: 20px;
-        overflow: hidden;
-      }
-
-      .product-image img {
-        transition: transform 0.3s ease;
-        max-width: 100%;
-        height: fit-content;
-      }
-
-      .product-image img:hover {
-        transform: scale(1.2);
-      }
-
-      .item-price {
-        margin-top: 10px;
-        font-weight: bolder;
-        font-size: 24px;
-        color: red;
-      }
-
-      .text-box {
-        background-color: #f9f9f9;
-        padding: 10px;
-        margin-right: 300px;
-        margin-left: 300px;
-      }
-
-      .buy-now {
-        display: flex;
-        align-items: center;
-        margin-left: 20px;
-      }
-
-      .buy-button {
-        padding: 10px 20px;
-        background-color: #3498db;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 2);
-      }
-
-      .buy-button-container {
-        margin-left: auto;
-      }
-
-      .logo img {
-        width: 150px;
-        flex: auto;
-        position: absolute;
-        left: 0;
-        margin-bottom: 20px;
-        margin-left: 20px;
-      }
-
-      .size-selection {
-        margin-right: 10px;
-      }
-    </style>
+    <link rel="stylesheet" href="css/product_page.css" />
+    <script defer src="js/product_page.js"></script>
   </head>
   <body>
     <header>
@@ -99,8 +18,8 @@
           />
         </a>
       </div>
-      <h1>Senja L3 Jacket</h1>
-      <p class="item-price">$49.99</p>
+      <h1 id="product-title"></h1>
+      <p class="item-price"></p>
       <div class="buy-now">
         <div class="size-selection">
           <label for="size-select">Size:</label>
@@ -117,56 +36,13 @@
     <main>
       <div class="product-details">
         <div class="product-image">
-          <img
-            src="images/senja1.png"
-            alt="Senja L3 Jacket"
-            width="450"
-            height="550"
-          />
-          <img
-            src="images/senja2.png"
-            alt="Senja L3 Jacket"
-            width="450"
-            height="550"
-          />
-          <img
-            src="images/senja3.png"
-            alt="Senja L3 Jacket"
-            width="450"
-            height="550"
-          />
-          <img
-            src="images/senja4.png"
-            alt="Senja L3 Jacket"
-            width="450"
-            height="550"
-          />
-        </div>
-        <div class="text-box">
-          <p class="item-description">
-            When designing technical shell clothing for summit tours, it's
-            crucial to strike a perfect balance between weight, weather
-            protection, ventilation, durability, and detailing. With the Senja
-            3L Jacket, we've achieved just that!
-          </p>
-          <p>
-            The Dermizax®NX 3-layer material is both lightweight and soft, yet
-            durable enough to withstand years of hard use. It offers top-notch
-            weather protection and moisture transport with a water column of
-            20,000 mm and moisture transport over 30,000 g/m2/24h.
-          </p>
-          <p>
-            When climbing steep terrain, it's essential to have maximum airflow
-            in your jacket. That's why the Senja 3L Jacket features long
-            ventilation zips under the sleeves and a 2-way zip in the front. The
-            extra-high collar protects your neck and face from wind and snow,
-            and the helmet-compatible hood is easy to adjust for optimal
-            visibility. To enhance your comfort, we've added a
-            moisture-absorbing and quick-drying material to the neck and chin
-            protection.
-          </p>
+          <img id="product-img" src="" alt="Product Image" />
         </div>
       </div>
+      <div class="text-box">
+        <p id="item-description" class="item-description"></p>
+      </div>
     </main>
+    <div id="loading-indicator" style="display: block">Loading...</div>
   </body>
 </html>
