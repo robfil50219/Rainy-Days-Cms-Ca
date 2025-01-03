@@ -4,13 +4,31 @@ body {
     padding: 0;
   }
   
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px;
-    background-color: #90BABF;
-  }
+  /* Header Styles */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #90babf;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo Styles */
+header .logo img {
+  max-height: 60px;
+  width: auto;
+  margin-right: 20px;
+}
+
+/* Heading Styles */
+header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  text-align: center;
+  flex: 1; /* Allows the heading to take up remaining space */
+}
+
   
   .left-section {
     display: flex;
