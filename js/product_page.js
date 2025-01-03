@@ -6,7 +6,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const getProductData = async () => {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('id'); // Get the product ID from the URL
-    const productDetailURL = `http://rainy-days.local/wp-json/wc/store/products/${productId}`;
+    const productDetailURL = `/wp-json/wc/store/products/${productId}`;
+
 
     try {
       const response = await fetch(productDetailURL);

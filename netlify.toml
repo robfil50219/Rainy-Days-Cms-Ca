@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/wp-json/*"
+  to = "http://rainy-days.local/wp-json/:splat"
+  status = 200
+  force = true
