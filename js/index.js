@@ -1,60 +1,70 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiURL = 'http://rainy-days.local/wp-json/wc/store/products'; // API endpoint
-  const productContainer = document.querySelector('.body-items .row'); // Container for products
+  const apiURL = 'http://rainy-days.local/wp-json/wc/store/products';
+  const loadingIndicator = document.getElementById('loading-indicator');
+  const productContainer = document.querySelector('.body-items .row');
 
-  // Function to fetch products from the API
-  async function fetchProducts() {
+  // Fetch data from the API
+  const fetchData = async () => {
     try {
+      // Show loading indicator
+      loadingIndicator.style.display = 'block';
+
       const response = await fetch(apiURL);
       if (!response.ok) {
         throw new Error('Failed to fetch products');
       }
+
       const products = await response.json();
 
-      // Render the products on the page
-      renderProducts(products);
+      // Display products and hide the loading indicator
+      displayProducts(products);
+      loadingIndicator.style.display = 'none';
     } catch (error) {
       console.error('Error fetching products:', error);
+      // Hide loading indicator even if there’s an error
+      loadingIndicator.style.display = 'none';
     }
-  }
+  };
 
-  // Function to render products on the page
-  function renderProducts(products) {
-    products.forEach(product => {
-      // Create a container for each product
+  // Function to display products
+  const displayProducts = (products) => {
+    if (products.length === 0) {
+      productContainer.textContent = 'No products available.';
+      return;
+    }
+
+    products.forEach((product) => {
       const item = document.createElement('div');
       item.classList.add('item');
 
-      // Add product image
+      // Product Image
       const productImage = document.createElement('img');
-      productImage.src = product.images[0]?.src || 'images/placeholder.png'; // Fallback to placeholder if no image
+      productImage.src = product.images[0]?.src || 'images/placeholder.png';
       productImage.alt = product.name;
       item.appendChild(productImage);
 
-      // Add product name
+      // Product Name
       const productName = document.createElement('h3');
       productName.textContent = product.name;
       item.appendChild(productName);
 
-      // Add product price
+      // Product Price
       const productPrice = document.createElement('p');
-      productPrice.textContent = `${product.prices.price / 100} NOK`; // Convert price to human-readable format
+      productPrice.textContent = `${product.prices.price / 100} NOK`;
       item.appendChild(productPrice);
 
-      // Add "View Product" link
+      // View Product Link
       const productLink = document.createElement('a');
-      productLink.href = product.permalink; // Link to product page
+      productLink.href = `product_page.html?id=${product.id}`;
       productLink.textContent = 'View Product';
-      productLink.target = '_blank'; // Open in a new tab
       item.appendChild(productLink);
 
-      // Append the product to the container
       productContainer.appendChild(item);
     });
-  }
+  };
 
-  // Fetch and display products when the page loads
-  fetchProducts();
+  // Call the fetchData function when the page loads
+  fetchData();
 });
 
 

@@ -2,101 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home | Rainy Days</title>
+    <title>Rainy Days | Home</title>
     <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/index.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="images/RainyDays_logo 6.png"
-            alt="Rainy Days logo Mountains and text with colour"
-          />
-        </a>
-      </div>
-      <div class="search-container">
-        <div class="search-icon">
-          <img src="images/search_icon.png" alt="Search" />
-        </div>
-        <div class="search-bar">
-          <input type="text" class="search-input" placeholder="Search..." />
-          <button class="search-button">Search</button>
-        </div>
-      </div>
-      <div class="cart">
-        <a href="cart.html">
-          <img src="images/cart_icon.png" alt="Cart" />
-        </a>
-      </div>
-      <input type="checkbox" id="menu-toggle" />
-      <label for="menu-toggle" class="menu-icon">
-        <img src="images/hamburger menu.png" alt="Menu Icon" />
-      </label>
-      <nav class="menu">
-        <ul>
-          <li><a href="new_arrivals.html">New Arrivals</a></li>
-          <li><a href="sale.html">Sale</a></li>
-          <li>
-            <a href="mens.html">Men's</a>
-            <ul class="submenu">
-              <li><a href="mens_tops.html">Tops</a></li>
-              <li><a href="mens_pants.html">Pants</a></li>
-              <li><a href="mens_jackets.html">Jackets</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="womans.html">Woman's</a>
-            <ul class="submenu">
-              <li><a href="womans_tops.html">Tops</a></li>
-              <li><a href="womans_pants.html">Pants</a></li>
-              <li><a href="womans_jackets.html">Jackets</a></li>
-            </ul>
-          </li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-        </ul>
-      </nav>
+      <h1>Rainy Days</h1>
+      <h2>Your favorite products, all in one place</h2>
     </header>
     <main>
-      <h1>Pushing The Comfort Zone</h1>
-      <h2>Featured Products</h2>
+      <div id="loading-indicator" style="display: block">
+        Loading products...
+      </div>
       <div class="body-items">
         <div class="row">
-          <!-- Product items will be dynamically generated here -->
-        </div>
-        <div class="row">
-          <!-- Product items will be dynamically generated here -->
+          <!-- Products will be dynamically generated here -->
         </div>
       </div>
     </main>
     <footer>
-      <div class="footer-content">
-        <div class="logo-container">
-          <a href="https://www.bergans.com" target="_blank">
-            <img src="images/berganslogo.png" alt="Bergans logo" />
-          </a>
-          <span class="license-text"
-            >Image(s) used under license from Bergans Of Norway. All rights
-            reserved.</span
-          >
-        </div>
-        <div class="social-media">
-          <a href="https://www.Twitter.com" target="_blank">
-            <img src="images/Twitterlogo.png" alt="Twitter" />
-          </a>
-          <a href="https://www.Facebook.com" target="_blank">
-            <img src="images/Facebooklogo.png" alt="Facebook" />
-          </a>
-          <a href="https://www.Instagram.com" target="_blank">
-            <img src="images/Instagramlogo.png" alt="Instagram" />
-          </a>
-        </div>
-      </div>
+      <p>&copy; 2025 Rainy Days. All rights reserved.</p>
     </footer>
-    <div id="loading-indicator" style="display: block">Loading...</div>
   </body>
 </html>
