@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const apiURL = '//rainy-days.local/wp-json/wc/store/products';
+  const apiURL = ' https://rainy-days.local/wp-json/wc/store/products';
   const loadingIndicator = document.getElementById('loading-indicator');
   const productContainer = document.querySelector('.body-items .row');
 
