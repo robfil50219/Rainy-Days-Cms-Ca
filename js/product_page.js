@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const productId = urlParams.get('id'); // Get the product ID from the URL
     const productDetailURL = `/wp-json/wc/store/products/${productId}`;
 
-
     try {
       const response = await fetch(productDetailURL);
       if (!response.ok) {
