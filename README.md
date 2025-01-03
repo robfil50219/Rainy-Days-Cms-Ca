@@ -62,7 +62,7 @@ Ensure the following before running the project:
 
 ## Deployment
 
-The project is deployed on [Netlify](https://netlify.com) for the frontend and a dynamic WordPress host for the backend. Ensure the WordPress instance is live and accessible for the frontend to function correctly.
+The project is deployed on [Netlify](https://rainy-days-cms.netlify.app/) for the frontend and a dynamic WordPress host for the backend. Ensure the WordPress instance is live and accessible for the frontend to function correctly.
 
 ## Submission Details
 
@@ -82,8 +82,8 @@ The project is deployed on [Netlify](https://netlify.com) for the frontend and a
 
 ## Author
 
-- **Developer:** Robert Filep
-- **Contact:** robfil50219@stud.noroff.no
+- **Developer:** [Robert Filep]
+- **Contact:** [robfil50219@stud.noroff.no]
 
 ## License
 
