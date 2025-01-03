@@ -5,44 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Product Page | Rainy Days</title>
-    <link rel="stylesheet" href="css/product_page.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <script defer src="js/product_page.js"></script>
   </head>
   <body>
     <header>
-      <div class="logo">
-        <a href="index.html">
-          <img
-            src="images/RainyDays_logo 6.png"
-            alt="Rainy Days logo Mountains and text with colour"
-          />
-        </a>
-      </div>
-      <h1 id="product-title"></h1>
-      <p class="item-price"></p>
-      <div class="buy-now">
-        <div class="size-selection">
-          <label for="size-select">Size:</label>
-          <select id="size-select">
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="x-large">X-Large</option>
-          </select>
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="images/RainyDays_logo 6.png"
+              alt="Rainy Days logo Mountains and text with colour"
+            />
+          </a>
         </div>
-        <button class="buy-button">Buy Now</button>
+        <h1 id="product-title"></h1>
       </div>
     </header>
     <main>
-      <div class="product-details">
+      <div class="product-container">
         <div class="product-image">
           <img id="product-img" src="" alt="Product Image" />
         </div>
-      </div>
-      <div class="text-box">
-        <p id="item-description" class="item-description"></p>
+        <div class="product-info">
+          <p class="item-price" id="item-price"></p>
+          <p id="item-description" class="item-description"></p>
+          <div class="buy-now">
+            <div class="size-selection">
+              <label for="size-select">Size:</label>
+              <select id="size-select">
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="x-large">X-Large</option>
+              </select>
+            </div>
+            <button class="buy-button">Buy Now</button>
+          </div>
+        </div>
       </div>
     </main>
+    <footer>
+      <p>&copy; 2025 Rainy Days. All rights reserved.</p>
+    </footer>
     <div id="loading-indicator" style="display: block">Loading...</div>
   </body>
 </html>
