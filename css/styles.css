@@ -7,7 +7,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
 }
 
 /* General Header Styles */
@@ -51,10 +51,10 @@ header h1 {
 /* Body Items */
 .body-items {
   display: flex;
-  flex-wrap: wrap; /* Ensure items wrap instead of scrolling horizontally */
+  flex-wrap: wrap; 
   justify-content: center;
   margin: 50px;
-  gap: 20px; /* Add space between cards */
+  gap: 20px; 
   padding: 10px;
 }
 
@@ -212,3 +212,89 @@ footer {
   border-radius: 5px;
 }
 
+/* Hamburger Menu Styling */
+.hamburger-menu {
+  position: relative;
+}
+
+.menu-icon {
+  cursor: pointer;
+  display: block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
+.menu-icon span {
+  display: block;
+  background-color: #333;
+  height: 4px;
+  width: 30px;
+  margin: 5px 0;
+  transition: 0.3s;
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.menu li {
+  padding: 10px 20px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.menu li a:hover {
+  color: #004cfd;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu {
+  display: block;
+}
+
+/* Responsive Menu Design */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-icon span:nth-child(1) {
+    transform-origin: top left;
+  }
+
+  .menu-icon span:nth-child(3) {
+    transform-origin: bottom left;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(1) {
+    transform: rotate(45deg);
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked + .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg);
+  }
+}
