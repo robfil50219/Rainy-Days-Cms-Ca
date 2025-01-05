@@ -16,6 +16,21 @@
       <h1>Your favorite products, all in one place</h1>
     </header>
     <main>
+      <div class="controls">
+        <input
+          type="text"
+          id="search-bar"
+          placeholder="Search products..."
+          oninput="handleSearch()"
+        />
+        <select id="sort-options" onchange="handleSort()">
+          <option value="default">Sort by</option>
+          <option value="price-asc">Price: Low to High</option>
+          <option value="price-desc">Price: High to Low</option>
+          <option value="name-asc">Name: A to Z</option>
+          <option value="name-desc">Name: Z to A</option>
+        </select>
+      </div>
       <div id="loading-indicator" style="display: block">
         Loading products...
       </div>
