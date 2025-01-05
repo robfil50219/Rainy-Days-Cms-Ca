@@ -65,6 +65,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
       productContainer.appendChild(item);
     });
+
+    adjustProductGrid(); // Adjust the layout after displaying products
+  };
+
+  // Function to adjust product grid layout dynamically
+  const adjustProductGrid = () => {
+    const productCards = document.querySelectorAll('.body-items .item');
+    const screenWidth = window.innerWidth;
+
+    let maxCardsPerRow = 5; // Default for large screens
+
+    if (screenWidth <= 1200) {
+      maxCardsPerRow = 4; // Medium screens
+    }
+    if (screenWidth <= 992) {
+      maxCardsPerRow = 3; // Smaller screens
+    }
+    if (screenWidth <= 768) {
+      maxCardsPerRow = 2; // Mobile screens
+    }
+    if (screenWidth <= 480) {
+      maxCardsPerRow = 1; // Small mobile screens
+    }
+
+    const cardWidth = 100 / maxCardsPerRow;
+
+    productCards.forEach((card) => {
+      card.style.flex = `1 1 ${cardWidth}%`; // Set flex width
+      card.style.maxWidth = `${cardWidth}%`; // Set max width
+    });
   };
 
   // Search Functionality
@@ -96,6 +126,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add Event Listeners
   searchBar.addEventListener('input', handleSearch);
   sortOptions.addEventListener('change', handleSort);
+  window.addEventListener('resize', adjustProductGrid); // Adjust grid on resize
 
   // Call the fetchData function when the page loads
   fetchData();
