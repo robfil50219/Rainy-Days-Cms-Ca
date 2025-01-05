@@ -4,41 +4,66 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
-    <title>CONTACT | Rain Days</title>
+    <script src="js/index.js" defer></script>
+    <script defer src="js/popup.js"></script>
+    <title>Contact Us | Rainy Days</title>
   </head>
   <body>
     <header>
-      <div class="left-header">
-        <a href="index.html" class="continue-shopping-button"
-          >Continue Shopping</a
-        >
+      <div class="header-container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/RainyDays_logo 6.png" alt="Rainy Days Logo" />
+          </a>
+        </div>
+        <h1 class="center-header">Contact Us</h1>
+        <div class="hamburger-menu">
+          <input type="checkbox" id="menu-toggle" />
+          <label for="menu-toggle" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+          <ul class="menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
       </div>
-      <h1 class="center-header">Contact Us</h1>
-      <div class="right-section"></div>
     </header>
-    <div class="contact-text">
-      <p>
-        We'd love to hear from you! If you have any questions, feedback, or
-        inquiries, please feel free to get in touch with us using the contact
-        form below.
-      </p>
-    </div>
-    <div class="contact-form-container">
-      <form action="process-contact.php" method="post">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required />
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-    <div class="contact-text">
-      <p>
-        We'll do our best to respond to your message as soon as possible. Thank
-        you for reaching out!
-      </p>
-    </div>
+    <main>
+      <section class="contact-intro">
+        <p>
+          We'd love to hear from you! If you have any questions, feedback, or
+          inquiries, please feel free to get in touch with us using the contact
+          form below.
+        </p>
+      </section>
+      <section class="contact-form-container">
+        <form id="contactForm" action="process-contact.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+      <section class="contact-thankyou">
+        <p>
+          We'll do our best to respond to your message as soon as possible.
+          Thank you for reaching out!
+        </p>
+      </section>
+      <!-- Popup Message -->
+      <div id="popupMessage" class="popup hidden">
+        <p>Your message has been sent successfully!</p>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Rainy Days. All rights reserved.</p>
+    </footer>
   </body>
 </html>

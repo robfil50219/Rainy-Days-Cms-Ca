@@ -41,11 +41,13 @@ header {
 
 /* Product Title Styling */
 header h1 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   color: #333;
-  margin: 0 auto;
+  margin: 0;
   text-align: center;
-  flex: 1;
+  position: absolute; 
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Body Items */
@@ -336,4 +338,138 @@ main h1 {
   max-width: 560px; 
   border-radius: 10px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); 
+}
+/* Main Content Styling */
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Intro Section */
+.contact-intro {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact-intro p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Contact Form Container */
+.contact-form-container {
+  margin: 20px 0;
+}
+
+.contact-form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form-container label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #000000; 
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  border-color: #000000;
+  outline: none;
+  box-shadow: 0 0 5px rgba(80, 80, 80, 0.5);
+}
+
+.contact-form-container button {
+  background-color: #7A7A7A;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form-container button:hover {
+  background-color: #909090; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form-container button:active {
+  background-color: #5A5A5A; 
+}
+
+
+/* Contact Thank You Section */
+.contact-thankyou {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.contact-thankyou p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 15px;
+  }
+
+  .contact-intro p,
+  .contact-thankyou p {
+    font-size: 1rem;
+  }
+
+  .contact-form-container input,
+  .contact-form-container textarea {
+    font-size: 0.9rem;
+  }
+
+  .contact-form-container button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+.popup p {
+  margin: 0;
+  font-size: 1rem;
+  color: #333;
+}
+
+.hidden {
+  display: none;
 }
